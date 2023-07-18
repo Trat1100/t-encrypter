@@ -4,6 +4,8 @@ function encrypt() {
     var encryptedText = sjcl.encrypt(key, inputText);
     document.getElementById("outputText").value = encryptedText;
 
+
+    // ripples code 
     let btn = document.querySelectorAll(".btn");
 btn.forEach(btn => {
     btn.onclick = function(e){
