@@ -1,16 +1,16 @@
 *,
 body {
-  font-family: "Inter", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(255,255,255,0) !important;
-  outline: none !important;
-  background-color: black;
-  color: white;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+    outline: none !important;
+    background-color: black;
+    color: white;
 }
 
-body{
+body {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -24,6 +24,38 @@ body{
 
 /* HEADING */
 
-.h1{
+h1 {
     letter-spacing: 1px;
+    position: relative;
+    color: black;
+    -webkit-text-stroke: 0.2vw #383d52;
+    font-size: 5vw;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    border-right: 2px solid #01fe87;
+    -webkit-text-stroke: 0vw #383d52;
+    overflow: hidden;
+    animation: headingText 4s linear infinite;
+}
+
+@keyframes headingText {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
 }
