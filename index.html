@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T-Encrypter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <h1>T-Encrypter</h1>
-    
-    <label for="inputText">Enter the text:</label>
-    <textarea id="inputText" rows="5"></textarea>
-    
-    <label for="outputText">Result</label>
-    <textarea id="outputText" rows="5" readonly></textarea>
-    
-    <button onclick="encrypt()">Encrypt</button>
-    <button onclick="decrypt()">Decrypt</button>
+    <!-- HEADING  -->
+
+    <div class="heading">
+        <h1 data-texts="headingText">T-Encrypter</h1>
+    </div>
+
+    <!-- INPUT TEXT BOX  -->
+
+    <div class="textBox">
+
+        <div class="textboxHeading">Enter Input</div>
+        <div class="textBoxBox">
+            <textarea name="inputText" id="inputText" cols="30" rows="10"></textarea>
+        </div>
+
+    </div>
+
+
+    <!-- BUTTONS  -->
+
+    <div class="buttonsArea">
+
+        <div class="button"><button onclick="encrypt()">ENCRYPT</button></div>
+        <div class="button"><button onclick="decrypt()">DECRYPT</button></div>
+
+    </div>
+
+    <!-- RESULT BOX -->
+
+    <div class="textBox">
+
+        <div class="textboxHeading">Result</div>
+        <div class="textBoxBox">
+            <textarea name="outputText" id="outputText" cols="30" rows="10"></textarea>
+        </div>
+
+    </div>
 
     <script src="scripts/sjcl.js"></script>
     <script src="scripts/script.js"></script>
-    
+    <script src="scripts/style.js"></script>
+
 </body>
+
 </html>
