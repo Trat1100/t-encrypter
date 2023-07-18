@@ -5,7 +5,7 @@ function encrypt() {
     document.getElementById("outputText").value = encryptedText;
 
 
-    // ripples code 
+    // ripples code (the circle effect in case you are dumb)
     let btn = document.querySelectorAll(".btn");
 btn.forEach(btn => {
     btn.onclick = function(e){
@@ -33,6 +33,7 @@ function decrypt() {
     var decryptedText = sjcl.decrypt(key, inputText);
     document.getElementById("outputText").value = decryptedText;
 
+        // ripples code (the circle effect in case you are dumb)
     let btn = document.querySelectorAll(".btn");
 btn.forEach(btn => {
     btn.onclick = function(e){
