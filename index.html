@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T-Encrypter</title>
+    <title>Encryptex</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,42 +16,44 @@
     <!-- HEADING  -->
 
 
-        <h1 data-text="Encrypter">Encrypter</h1>
+    <h1 data-text="Encryptex">Encryptex</h1>
 
 
     <!-- INPUT TEXT BOX  -->
 
     <div class="main">
 
-    <div class="textBox">
+        <div class="textBox">
 
-        <div class="textboxHeading">Enter Input</div>
-        <div class="textBoxBox">
-            <textarea name="inputText" id="inputText" ></textarea>
+            <div class="textboxHeading">Enter Input</div>
+            <div class="textBoxBox">
+                <textarea name="inputText" id="inputText"></textarea>
+            </div>
+
         </div>
 
-    </div>
+
+        <!-- BUTTONS  -->
+
+        <div class="buttonsArea">
+
+            <a href="#" onclick="encrypt()" class="btn" draggable="false">ENCRYPT</a>
+
+            <a href="#" onclick="decrypt()" class="btn" draggable="false">DECRYPT</a>
 
 
-    <!-- BUTTONS  -->
-
-    <div class="buttonsArea">
-
-        <div class="button"><button onclick="encrypt()">ENCRYPT</button></div>
-        <div class="button"><button onclick="decrypt()">DECRYPT</button></div>
-
-    </div>
-
-    <!-- RESULT BOX -->
-
-    <div class="textBox">
-
-        <div class="textboxHeading">Result</div>
-        <div class="textBoxBox">
-            <textarea name="outputText" id="outputText" cols="30" rows="10"></textarea>
         </div>
 
-    </div>
+        <!-- RESULT BOX -->
+
+        <div class="textBox">
+
+            <div class="textboxHeading invisible">Result</div>
+            <div class="textBoxBox">
+                <textarea name="outputText" id="outputText" readonly></textarea>
+            </div>
+
+        </div>
 
     </div>
 
