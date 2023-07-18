@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
     outline: none !important;
-    background-color: black;
+    background-color: #0c1022;
     color: white;
 }
 
@@ -14,12 +14,9 @@ body {
     height: 100vh;
     width: 100vw;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-around;
-    gap: 0%;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* HEADING */
@@ -27,7 +24,7 @@ body {
 h1 {
     letter-spacing: 1px;
     position: relative;
-    color: black;
+    color: #0c1022;
     -webkit-text-stroke: 0.2vw #383d52;
     font-size: 5vw;
 }
@@ -58,4 +55,80 @@ h1::before {
     90% {
         width: 100%;
     }
+}
+
+/* MAIN AREA STARTS HERE  */
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TEXTBOXES  */
+
+textarea {
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background-color: #0c1022;
+    z-index: 1;
+    border: none;
+    padding: 15px;
+}
+
+.textBoxBox {
+    position: relative;
+    width: 30vw;
+    height: 25vw;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.textboxHeading{
+    margin: 2vw 0 1vw 0;
+    font-size: 1.2vw;
+    color: #383d52;
+}
+
+.textBoxBox::after {
+    content: " ";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, #d400d4);
+    animation: textBoxBorder 4s linear infinite;
+    animation-delay: -2s;
+}
+
+.textBoxBox::before {
+    content: " ";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    animation: textBoxBorder 4s linear infinite;
+}
+
+
+@keyframes textBoxBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* BUTTONS */
+
+.buttonsArea {
+    display: flex;
 }
